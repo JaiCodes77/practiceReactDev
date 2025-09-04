@@ -23,6 +23,7 @@ body{
     align-items: center;
     border: 3px solid rgb(110, 244, 188);
     box-shadow: 15px 7px 7px rgb(182, 226, 116);
+    border-radius: 20px;
 } 
 
 #img{ 
