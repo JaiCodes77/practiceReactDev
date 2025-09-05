@@ -15,7 +15,7 @@ function LikeButton() {
         onChange={(e)=>{setText(e.target.value)}}
         />
 
-        <p>texts : {text} </p>
+        <p>text : {text} </p>
 
         <p>number of likes : {count}</p>
         <button id='likeBtn' onClick={()=>{setCount(count+1)}}>♡</button>
