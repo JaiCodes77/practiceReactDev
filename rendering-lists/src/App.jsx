@@ -1,10 +1,11 @@
 import React from 'react'
 import Lists from './components/Lists'
+import Books from './components/Books'
 
 function App() {
   return (
     <div>
-      <Lists/>
+      <Books/>
     </div>
   )
 }

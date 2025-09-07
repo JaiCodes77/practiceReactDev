@@ -12,7 +12,7 @@ function Lists() {
   return (
     <div> 
         <ul>
-            {todos.map((todo)=> <li key='todo.id'>todo : {todo.name}</li>)} 
+            {todos.map((todo)=> <li key='todo.id'>todo : {todo.name}</li>)}  
         </ul>
     </div>
   )
