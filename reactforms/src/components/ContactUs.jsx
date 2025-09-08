@@ -1,37 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function ContactUs() {
+function ContactUs() { 
+
+  const [inputs, setInputs] = useState({});
+
+  function handleSubmit(e){
+    e.preventDefault()
+    alert(JSON.stringify(inputs));
+  }
+
+  function handleChange(e){
+    const name = e.target.name;
+    const value = e.target.value;
+    setInputs(values=>({...values, [name]: value}))
+  } 
+
   return (
     <div> 
-        <form>
+        <form onSubmit={handleSubmit}> 
             <label> 
                 first Name : 
                 <input type="text"  
                  name='firstname'
-                 value={''}/>
+                 value={inputs.firstname || ''}
+                 onChange={handleChange}/>
             </label> 
 
             <label>
                 last Name : 
                 <input type="text"
                 name='lastname'
-                value={''} />
+                value={inputs.lastname || ''}
+                onChange={handleChange} />
             </label>  
 
-            <label>
-              <input type="text" 
+            <label> 
+              Email : 
+              <input type="email" 
               name = 'email' 
-              value = {''} />
+              value = {inputs.email || ''}
+              onChange={handleChange} />
             </label> 
 
-            <label>
-              <input type="text"
+            <label> 
+              Password : 
+              <input type="password"
               name = 'password'
-              value={''} /> 
+              value={inputs.password || ''}
+              onChange={handleChange}/> 
             </label> 
 
             <button type='submit'>Submit</button>
-            <p>first name : {} , last name : {}</p>
         </form>
     </div>
   )
