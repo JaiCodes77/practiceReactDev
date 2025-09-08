@@ -27,8 +27,10 @@ function ContactUs() {
             <label>
               <input type="text"
               name = 'password'
-              value={''} />
-            </label>
+              value={''} /> 
+            </label> 
+
+            <button type='submit'>Submit</button>
             <p>first name : {} , last name : {}</p>
         </form>
     </div>
