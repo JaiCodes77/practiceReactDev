@@ -1,9 +1,10 @@
 import React from 'react'
 import Forms from './components/Forms'
+import ContactUs from './components/ContactUs'
 
 function App() {
   return (
-    <div></div>
+    <div><ContactUs/></div>
   )
 }
 
