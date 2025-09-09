@@ -18,53 +18,54 @@ function ContactUs() {
   return ( 
     <div className="containerdiv"> 
     <div className="containerstylingdiv"> 
-      <form onSubmit={handleSubmit} className="formdiv">
+      <form onSubmit={handleSubmit} className="formdiv"> 
+          <h3 className="h3">Create Your Account</h3>
         <div className="labeldiv"> 
-          <label>first Name :</label>
           <input
             type="text"
             name="firstname"
             value={inputs.firstname || ""}
             onChange={handleChange}
             className="inputfield"
+            placeholder="Enter your firstname"
           />
         </div>
 
         <div className="labeldiv">
-          <label>last Name :</label>
           <input
             type="text"
             name="lastname"
             value={inputs.lastname || ""}
             onChange={handleChange}
             className="inputfield"
+            placeholder="Enter your lastname"
           />
         </div>
 
         <div className="labeldiv">
-          <label>Email :</label>
           <input
             type="email"
             name="email"
             value={inputs.email || ""}
             onChange={handleChange}
             className="inputfield"
+            placeholder="Enter your email"
           />
         </div>
 
         <div className="labeldiv">
           {" "}
-          <label>Password :</label>
           <input
             type="password"
             name="password"
             value={inputs.password || ""}
             onChange={handleChange}
             className="inputfield"
+            placeholder="Enter your password"
           />
         </div>
 
-        <button type="submit">Submit</button>
+        <button className="btn" type="submit">Create Account</button>
       </form>
       </div>
     </div>
