@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './ContactUs.css';
 
 function ContactUs() { 
 
@@ -16,7 +17,7 @@ function ContactUs() {
   } 
 
   return (
-    <div> 
+    <div className='containerdiv'> 
         <form onSubmit={handleSubmit}> 
             <label> 
                 first Name : 
