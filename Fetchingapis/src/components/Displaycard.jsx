@@ -1,4 +1,5 @@
 import React from 'react'
+import './Displaycard.css';
 
 function Displaycard(props) {
   return (
