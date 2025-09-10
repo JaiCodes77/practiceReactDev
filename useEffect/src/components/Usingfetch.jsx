@@ -18,7 +18,7 @@ function Usingfetch() {
   return (
     <div> 
         { loading ? (<h1>Loading...</h1>): (<ul>
-            {data.map(posts=>{<li>{posts.title}</li>})}
+            {data.map(posts=>{<li key={posts.id}>{posts.title}</li>})}
         </ul>)}
     </div>
   )
