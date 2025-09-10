@@ -28,7 +28,7 @@ function Weatherapp() {
         <p>Loading...</p>
       ) : (
         <div>
-          <h2>Current Weather</h2>
+          <h2>Current Weather in Banglore</h2>
           <p>Temperature: {data.current_weather.temperature}°C</p>
           <p>Wind Speed: {data.current_weather.windspeed} km/h</p>
         </div>
