@@ -14,7 +14,7 @@ function Weatherapp() {
         const weatherdata = await response.json();
         setData(weatherdata);
         setLoading(false);
-      } catch (err) {
+      } catch (err) { 
         console.log(err);
       }
     };
