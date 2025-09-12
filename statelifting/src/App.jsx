@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Todoadd from './components/todoadd';
+import Tododisplay from './components/tododisplay';
 
-function App() {
+function App() { 
+
+  const [todo,setTodo] = useState();
   return (
-    <div>
-      
+    <div> 
+      <Todoadd onChange={setTodo}/>
+      <Tododisplay value={todo}/>
     </div>
   )
 }

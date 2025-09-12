@@ -1,9 +1,9 @@
 import React from 'react'
 
-function tododisplay() {
+function Tododisplay() {
   return (
-    <div>tododisplay</div>
+    <div>Tododisplay</div>
   )
 }
 
-export default tododisplay
+export default Tododisplay

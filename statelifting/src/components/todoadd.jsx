@@ -1,9 +1,9 @@
 import React from 'react'
 
-function todoadd() {
+function Todoadd() {
   return (
-    <div>todoadd</div>
+    <div>T</div>
   )
 }
 
-export default todoadd
+export default Todoadd
