@@ -14,8 +14,8 @@ function App() {
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
-  };;
-
+  };; 
+  
   return (
     <div>
       <h1>Shopping Cart</h1>
