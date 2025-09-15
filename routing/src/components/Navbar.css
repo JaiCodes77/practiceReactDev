@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.containerdiv {
+   height: 100vh;
+   width: 100%; 
+   background-color: rgb(8, 81, 81);
+}
+
+.sidebar {   
+    background-color: rgb(26, 82, 63);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    width: 300px; 
+} 
+
+.sidebarcontent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 240px;
+    gap: 40px;
+    align-items: center;
+} 
+
+button {
+    background-color: rgb(58, 13, 101);
+    border-radius: 10px;
+    width: 120px;
+    cursor: pointer;
+}
