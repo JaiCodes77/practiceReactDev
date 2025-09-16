@@ -22,15 +22,20 @@ function ChildC() {
             price : 5600
         } 
         setCart(prev=> [...prev, newItem])
-    }
+    } 
     
+    function deleteFromCart(){
+        setCart(prevCart=> prevCart.length > 0 ? prevCart.slice(0,prevCart.length-1):prevCart)
+    } 
+
   return (
     <div>ChildC  
         <button onClick={togglecolor}>Change Theme</button>
          <p>data : {user.name}</p>
          <p> data 2 : {user.age}</p> 
 
-            <button onClick={addToCart}>Add Item</button>
+            <button onClick={addToCart}>Add Item</button> 
+            <button onClick={deleteFromCart}>Delete Item</button>
          <h3> shopping cart : {cart.map(item=> <li key={item.id}>{item.name}-{item.price}</li>)}</h3>
     </div>
   )
