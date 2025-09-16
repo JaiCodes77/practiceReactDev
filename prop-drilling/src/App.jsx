@@ -1,8 +1,13 @@
 import React from 'react'
+import Layout from './Layout.jsx'
 
-function App() {
+function App() { 
+
+  const user = { name : 'Jai', age : 21}
   return (
-    <div>App</div>
+    <div>
+      <Layout user={user}/>
+    </div>
   )
 }
 
