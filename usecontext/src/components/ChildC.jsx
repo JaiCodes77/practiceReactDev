@@ -21,7 +21,7 @@ function ChildC() {
             id : 2,
             price : 5600
         } 
-        setCart(prev=> [...prev, newItem])
+        setCart(prevCart=> [...prevCart, newItem])
     } 
     
     function deleteFromCart(){
