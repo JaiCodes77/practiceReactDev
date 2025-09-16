@@ -15,6 +15,14 @@ function ChildC() {
         }
     } 
 
+    function addToCart(){
+        const newItem = {
+            name : 'lenovo',
+            id : 2,
+            price : 5600
+        } 
+        setCart(prev=> [...prev, newItem])
+    }
     
   return (
     <div>ChildC  
@@ -22,7 +30,8 @@ function ChildC() {
          <p>data : {user.name}</p>
          <p> data 2 : {user.age}</p> 
 
-         <h3> shopping cart : {cart[0].name}-{cart[0].price}</h3>
+            <button onClick={addToCart}>Add Item</button>
+         <h3> shopping cart : {cart.map(item=> <li key={item.id}>{item.name}-{item.price}</li>)}</h3>
     </div>
   )
 }
