@@ -1,9 +1,11 @@
 import React from 'react'
 import useCurrency from './hooks/useCurrency'
+import useCounter from './hooks/useCounter';
 
 function App() { 
   const currencyInfo = useCurrency("btc");
-  const options = Object.keys(currencyInfo);
+  const options = Object.keys(currencyInfo); 
+  const {count,increment,decrement,reset} = useCounter();
   return (
     <div>
       <h3>Currency Info: </h3>
@@ -14,7 +16,14 @@ function App() {
         {options.map(id => (
           <li key={id}>{id}</li>
         ))}
-      </ul>
+      </ul> 
+
+      <div>
+        <h5>Count : {count}</h5>
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+        <button onClick={reset}>Reset</button>
+      </div>
     </div>
   )
 }
