@@ -29,12 +29,12 @@ function App() {
             <button onClick={addMovie}>Add</button>
 
             <ul>
-                {movies.map((movie, index) => (
-                    <li key={index}>
-                        {movie}
-                        <button onClick={() => removeMovie(movie)}>Remove</button>
-                    </li>
-                ))}
+               {movies.map((movie,index)=>(
+                <li key={index}>
+                  {movie}
+                  <button onClick={()=>removeMovie(movie)}>Remove</button>
+                </li>
+               ))}
             </ul>
         </div>
     );
