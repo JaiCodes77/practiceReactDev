@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useLocalStorage from './hooks/useLocalStorage';
+import useLocalStorage from './useLocalStorage';
 
 function App() {
     const [movies, setMovies] = useLocalStorage('movies', []);
