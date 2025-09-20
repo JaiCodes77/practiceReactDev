@@ -1,4 +1,38 @@
-.container {
+body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; 
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  width: 600px;
+  height: 200px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-right: 320px;
+}
+
+.headerdiv {
+  margin-right: 240px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.footer {
+  margin-top: 40px;
+  display: flex;
+  margin-left: 280px;
+  gap: 10px;
 }

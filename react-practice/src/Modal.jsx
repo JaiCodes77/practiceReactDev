@@ -8,22 +8,22 @@ function Modal() {
         <h3>Main question or action</h3>
       </div>
 
-      <div>
+      <div className="inputs">
         <label>
           <input type="checkbox" />
-          Staging
+          Action Item 1
         </label> 
 
         <label>
           <input type="checkbox" />
-          Development
+          Action Item 2
         </label>
 
       </div>
 
       <div className="footer">
-        <button className="applyBtn">apply</button>
-        <button className="cancelBtn">cancel</button>
+        <button className="applyBtn">Apply</button>
+        <button className="cancelBtn">Cancel</button>
       </div>
     </div>
   );

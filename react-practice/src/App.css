@@ -1,3 +1,7 @@
+body {
+  background-color: gainsboro;
+}
+
 .containerdiv{
   display: flex;
   flex-direction: row;
