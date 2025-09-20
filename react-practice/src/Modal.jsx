@@ -22,8 +22,8 @@ function Modal() {
       </div>
 
       <div className="footer">
-        <button className="applyBtn">Apply</button>
-        <button className="cancelBtn">Cancel</button>
+        <button className="Btnn">Apply</button>
+        <button className="Btnn">Cancel</button>
       </div>
     </div>
   );
