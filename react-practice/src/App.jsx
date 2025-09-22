@@ -10,11 +10,6 @@ function App() {
 
   return (
   <div>
-    
-   <div className='containerdiv'>
-    <button onClick={btnHandler} className='btn'>button text</button> 
-   </div>
-
     <Modal/>
    </div>
   )

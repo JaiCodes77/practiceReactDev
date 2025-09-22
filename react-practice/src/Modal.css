@@ -1,34 +1,34 @@
-body {
+.modal-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(173, 179, 183);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
-.container {
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 480px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  width: 600px;
-  height: 200px;
+  gap: 10px; 
+  margin-bottom: 20px;
 }
 
 .inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-right: 320px;
+  margin-right: 8px; 
 }
-
 .headerdiv {
-  margin-right: 240px;
-  font-family: Inter;
-  font-weight: 600;
-  letter-spacing: 0%;
-  vertical-align: middle;
+  margin-bottom: 40px;
 }
 
 .footer {
@@ -41,7 +41,7 @@ body {
 .Btnn {
   margin: 5px;
   padding: 5px;
-  width: 80px;
+  width: 200px;
   border-radius: 4px solid lightgray;
   margin-bottom: 10px;
   cursor: pointer;

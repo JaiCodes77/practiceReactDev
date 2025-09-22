@@ -1,32 +1,46 @@
-import React from "react";
-import './Modal.css'
+import React, { useState } from "react";
+import "./Modal.css";
 
 function Modal() {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const modalOpen = () => {
+    setModalOpen(true);
+  };
+  const modalClose = () => {
+    setModalOpen(false);
+  };
+
   return (
-    <div className="container">
-      <div className="headerdiv">
-        <h3>Main question or action</h3>
+    <div>
+      <button onClick={modalOpen}>Open Modal</button> 
+
+     {isModalOpen && (
+      <div className="modal-overlay" onClick={modalClose}>
+        <div className="modal-content" onClick={(e)=>e.stopPropagation()}>
+          <h3 className="headerdiv">Syncing Data Between Environments</h3>
+        
+           <div className="checkbox-container">
+          <label>
+            <input type="checkbox" className="inputs"/>
+            Staging
+          </label>
+          
+          <label>
+            <input type="checkbox" className="inputs"/>
+            Development
+          </label>
+        </div>
+
+          <div className="footer">
+          <button className="applyBtn Btnn">Apply Sync</button>
+          <button className="cancelBtn Btnn" onClick={modalClose}>Cancel</button>
+          </div>
+        </div>
       </div>
-
-      <div className="inputs">
-        <label>
-          <input type="checkbox" />
-          Action Item 1
-        </label> 
-
-        <label>
-          <input type="checkbox" />
-          Action Item 2
-        </label>
-
-      </div>
-
-      <div className="footer">
-        <button className="Btnn">Apply</button>
-        <button className="Btnn">Cancel</button>
-      </div>
+     )}
     </div>
-  );
+    );
 }
 
 export default Modal;
