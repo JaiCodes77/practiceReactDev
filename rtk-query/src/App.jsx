@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css';
 import {
   useGetPostByIdQuery,
   useGetPostsQuery,
@@ -14,7 +15,8 @@ function App() {
   if (error) return <p>...error</p>;
 
   return (
-    <div>
+    <div className="container"> 
+    <div className="holder">
       <h2>RTK Query Practice</h2>
       <h3>All posts</h3>
       {posts &&
@@ -22,8 +24,10 @@ function App() {
 
       <h3>singlePost</h3>
       {singlePost && <p>{singlePost.title}</p>}
+        </div>
 
-      <button
+      <button 
+      className="btn"
         onClick={async () => {
           const result = await addPost({
             title: "learning rtk",
