@@ -3,12 +3,12 @@ import React from 'react'
 function Dashboard() {
   return (
     <div className='min-h-screen min-w-screen'>
-        <h2 className='font-bold text-2xl m-8'>Overview</h2>
+        <h2 className='font-bold text-3xl m-8'>Overview</h2>
         <div> 
 
-            <div className='flex justify-evenly'>
-                <h3 className='font-bold text-lg'>Portfolio</h3>
-                <h3 className='font-bold text-lg'>Your Assets</h3>
+            <div className='flex justify-evenly mr-90'> 
+                <h3 className='font-bold text-xl'>Portfolio</h3>
+                <h3 className='font-bold text-xl'>Your Assets</h3>
             </div> 
             <div className='flex gap-4 justify-center items-center'>
             <div className='bg-sky-200 w-[550px] h-[300px] flex justify-center items-center mt-10 rounded-xl'>$17,000</div>
