@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 
 function Dashboard() {
   const [data, setData] = useState();
+  const [dropdown, setDropdown] = useState(false);
 
   useEffect(() => {
     const api = () =>
-      fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`
-      )
+      fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`)
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((error) => console.log(error));
@@ -18,6 +17,27 @@ function Dashboard() {
   return (
     <div className="min-h-screen min-w-screen">
       <h2 className="font-bold text-3xl m-8">Overview</h2>
+
+      <div className="flex">
+        <button
+          onClick={() => setDropdown(!dropdown)}
+          className="cursor-pointer"
+        >
+          dropdown
+        </button>
+        <div className="flex">
+          {dropdown && (
+            <div className="flex flex-col">
+              
+                <button className="cursor-pointer">Settings</button>
+                <button className="cursor-pointer">Profile</button>
+                <button className="cursor-pointer">Workspace</button>
+
+            </div>
+          )}
+        </div>
+      </div>
+
       <div>
         <div className="flex justify-evenly mr-90">
           <h3 className="font-bold text-xl">Portfolio</h3>
@@ -34,7 +54,9 @@ function Dashboard() {
             155 ETH
           </div>
           <div className="bg-yellow-200 w-[250px] h-[300px] mt-10 rounded-xl flex justify-center items-center">
-           {data?.map(d => <li key={d.id}>{d.name}</li>)}
+            {data?.map((d) => (
+              <li key={d.id}>{d.name}</li>
+            ))}
           </div>
         </div>
       </div>
