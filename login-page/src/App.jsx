@@ -23,7 +23,7 @@ function App() {
           </button>
         </div>
 
-        <div className="bg-neutral-500 w-[400px] h-[500px] mt-10 ml-30 flex flex-col gap-2">
+        <div className="bg-black/30 w-[400px] h-[500px] mt-10 ml-30 flex flex-col gap-2">
           <h2 className="text-white text-5xl font-extrabold flex justify-center mt-20 mr-8">
             Sign in
           </h2>
