@@ -52,7 +52,7 @@ function App() {
             <FaPinterestP className="text-white text-2xl font-bold cursor-pointer" />
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   );
 }
