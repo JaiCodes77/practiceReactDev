@@ -16,7 +16,9 @@ function App() {
           <button className="text-white rounded-lg w-[120px] p-2 bg-gradient-to-r from-orange-500 to-red-700 cursor-pointer">
             Learn more
           </button>
-        </div>
+        </div> 
+
+        <div className="bg-gray-100 w-[400px] h-[500px] mt-10 ml-30"></div>
       </div>
     </div>
   );
