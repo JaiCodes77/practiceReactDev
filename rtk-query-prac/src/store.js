@@ -7,5 +7,7 @@ const store = configureStore({
         [jsonplaceholderApi.reducerPath] : jsonplaceholderApi.reducer,
     }, 
 
-    middleware : (getDefaultMiddleware) => getDefaultMiddleware().concat(jsonplaceholderApi.middleware)
+    middleware : (getDefaultMiddleware) => getDefaultMiddleware().concat(jsonplaceholderApi.middleware) 
 })
+
+setupListeners(store.dispatch);
