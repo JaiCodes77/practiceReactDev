@@ -10,7 +10,9 @@ function App() {
   console.log(data)
 
   return (
-    <div>App</div>
+    <div>
+      {data?.map((posts)=> <p key={posts.id}>{posts.title}</p>)}
+    </div>
   )
 }
 
