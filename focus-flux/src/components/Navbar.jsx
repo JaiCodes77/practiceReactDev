@@ -16,23 +16,23 @@ function Navbar() {
           </button>
           <button>
             <NavLink
-              to="/about"
+              to="/Quests"
               className={({isActive}) => (isActive ? "active-link" : "")}
             >
-              About
+              Quests
             </NavLink>
           </button>
           <button>
             <NavLink
-              to="/contact"
+              to="/Dungeon"
               className={({isActive}) => (isActive ? "active-link" : " ")}
             >
-              Contact
+              Dungeon
             </NavLink>
           </button>
           <button>
             <NavLink
-              to="/dashboard"
+              to="/Dashboard"
               className={({isActive}) => (isActive ? "active-link" : " ")}
             >
               Dashboard
