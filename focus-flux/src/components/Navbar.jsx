@@ -10,7 +10,7 @@ function Navbar() {
               to="/"
               className={({isActive}) => (isActive ? "bg-violet-600 text-white rounded-2xl px-6 py-2"  : " ")}
             >
-              Home
+               Home  
             </NavLink>
           </button>
           <button className="">
@@ -18,7 +18,7 @@ function Navbar() {
               to="/Quests"
               className={({isActive}) => (isActive ? "bg-violet-600 text-white rounded-2xl px-6 py-2" : "")}
             >
-              Quests
+              Quests  
             </NavLink>
           </button>
           <button>
@@ -26,7 +26,7 @@ function Navbar() {
               to="/Dungeon"
               className={({isActive}) => (isActive ? "bg-violet-600 text-white rounded-2xl px-6 py-2"  : " ")}
             >
-              Dungeon
+              Dungeon 
             </NavLink>
           </button>
           <button>
