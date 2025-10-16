@@ -1,19 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-function App({initialCount}) { 
-  const [count,setCount] = useState(initialCount)
+export function sum(a, b) {
+  return a + b;
+}
 
-  function increment(){
-    setCount(count+1)
-  } 
+export const big = { one: 1, two: 2 };
 
-  function decrement(){
-    setCount(count-1)
-  } 
+function App({ initialCount }) {
+  const [count, setCount] = useState(initialCount);
 
-  function reset(){
-    setCount(0)
-  } 
+  function increment() {
+    setCount(count + 1);
+  }
+
+  function decrement() {
+    setCount(count - 1);
+  }
+
+  function reset() {
+    setCount(0);
+  }
+  const nig = sum(1, 2);
 
   return (
     <div>
@@ -21,8 +28,10 @@ function App({initialCount}) {
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
       <button onClick={reset}>Reset</button>
+
+      <p data-testid="nig">{nig}</p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

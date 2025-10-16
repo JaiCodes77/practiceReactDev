@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { sum,big } from './App';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -14,3 +15,11 @@ test('takes the initial value as a prop and passes it',()=>{
   expect(element.textContent).toBe('5');
 })
 
+test('testing the sum function',()=>{
+  render(<App/>);
+  expect(sum(1,2)).toBe(3);
+})
+
+test('testing whether the object is working correctly or not',()=>{
+  expect(big).toEqual({one:1,two:2});
+})
