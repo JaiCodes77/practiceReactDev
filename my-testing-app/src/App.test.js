@@ -7,8 +7,11 @@ import App from './App';
 //   expect(linkElement).toBeInTheDocument();
 // });
 
-test('if the initial prop  value is working or not',()=>{
+test('takes the initial value as a prop and passes it',()=>{
   render(<App initialCount={5}/>);
-  
+  const element = screen.getByTestId('count');
+  expect(element).toBeInTheDocument();
+  expect(element.textContent).toBe('5');
+
 })
 
