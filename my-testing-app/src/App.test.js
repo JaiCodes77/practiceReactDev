@@ -7,4 +7,8 @@ import App from './App';
 //   expect(linkElement).toBeInTheDocument();
 // });
 
+test('if the initial prop  value is working or not',()=>{
+  render(<App initialCount={5}/>);
+  
+})
 
