@@ -12,6 +12,5 @@ test('takes the initial value as a prop and passes it',()=>{
   const element = screen.getByTestId('count');
   expect(element).toBeInTheDocument();
   expect(element.textContent).toBe('5');
-
 })
 

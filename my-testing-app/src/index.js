@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App initialCount={5}/>
+    <App initialCount={0}/>
   </React.StrictMode>
 );
 
