@@ -22,4 +22,5 @@ test('testing the sum function',()=>{
 
 test('testing whether the object is working correctly or not',()=>{
   expect(big).toEqual({one:1,two:2});
-})
+}) 
+
