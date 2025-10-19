@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-        <div className="w-50 min-h-screen flex text-lg mr-330 font-serif bg-purple-200"> 
+        <div className="w-64 min-h-screen fixed left-0 top-0 flex text-lg font-serif bg-purple-200"> 
         <div className="flex flex-col gap-20 mt-20 ml-8">
           <button>
             <NavLink

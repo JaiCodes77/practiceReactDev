@@ -10,8 +10,9 @@ import Reports from './pages/Reports';
 
 function App() {
   return (
-    <div>
+    <div className='flex'>
        <Navbar/>
+       <div className="ml-64 flex-1 p-8">
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/Dungeon" element={<Dungeon/>} />
@@ -23,6 +24,7 @@ function App() {
         </Route> 
         
       </Routes>
+      </div>
     </div>
   )
 }
