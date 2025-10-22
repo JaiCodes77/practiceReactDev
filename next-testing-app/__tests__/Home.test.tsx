@@ -1,8 +1,10 @@
 import {render,screen} from '@testing-library/react'
-
 import Home from '@/app/page'
-import App from 'next/app'
 
 it('should have Docs text', () => {
-    render(<Home/>)
+    render(<Home/>) //ARRANGE 
+
+    const myElem = screen.getByText('Read our docs') //ACT
+
+    expect(myElem).toBeInTheDocument()//ASSERT
 })
