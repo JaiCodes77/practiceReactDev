@@ -1,30 +1,20 @@
-'use client'
+import AddTodo from '@/components/AddTodo/AddTodo'
+import Header from '@/components/Header/Header'
+import TodoItem from '@/components/TodoItem/TodoItem'
 import React from 'react'
-import TodoItem from '../TodoItem/TodoItem'
-import AddTodo from '../AddTodo/AddTodo'
 
-const Todos = () => {
-  const [current, setCurrent] = React.useState('')
-  const [todos, setTodos] = React.useState<string[]>([])
 
-  function handleAdd(todo: string) {
-    const trimmed = todo.trim()
-    if (!trimmed) return
-    setTodos(prev => [...prev, trimmed])
-    setCurrent('')
-  }
+type Props = {}
 
+const page = (props: Props) => {
+  const [todo, setTodo] = React.useState<string>('');
+  
   return (
-    <div className='space-y-4'>
-      <TodoItem value={current} onChange={setCurrent} />
-      <AddTodo todo={current} onAdd={handleAdd} />
-      <ul className='mt-4 space-y-2'>
-        {todos.map((t, i) => (
-          <li key={i} className='text-white'>{t}</li>
-        ))}
-      </ul>
+    <div className='flex flex-col gap-6'><Header/>
+   <div className='flex flex-row justify-center items-center gap-2'><TodoItem/>
+    <AddTodo/></div>
     </div>
   )
 }
 
-export default Todos
+export default page
