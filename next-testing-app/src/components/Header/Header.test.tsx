@@ -1,6 +1,5 @@
 import {render,screen} from '@testing-library/react';
 import Header from './Header';
-import Head from 'next/head';
 
 describe('header component',()=>{
     it('should render header component',()=>{
