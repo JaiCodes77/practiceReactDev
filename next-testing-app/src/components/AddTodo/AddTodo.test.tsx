@@ -12,7 +12,7 @@ describe('AddTodo Component',()=>{
         expect(button).toBeInTheDocument();
     });
 
-    it('should', async() => {
+    it('should call onAdd when the button is clicked', async() => {
         const user = userEvent.setup();
         const mockOnAdd = jest.fn();
 
