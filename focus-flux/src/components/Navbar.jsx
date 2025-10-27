@@ -2,43 +2,28 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const navLinkClass = ({ isActive }) => {
+    isActive
+      ? "bg-white text-violet-600 rounded-2xl px-8 py-3 font-medium transition-all duration-300 shadow-lg"
+      : "text-white px-8 py-3 hover:bg-violet-700 rounded-2xl transition-all duration-300 hover:translate-x-1"};
+
   return (
-        <div className="w-64 min-h-screen fixed left-0 top-0 flex text-lg font-serif bg-violet-800"> 
-        <div className="flex flex-col gap-20 mt-20 ml-8">
-          <button>
-            <NavLink
-              to="/"
-              className={({isActive}) => (isActive ? "bg-white text-violet-600 rounded-2xl pl-15 pr-31 py-2"  : "text-white  pl-15 pr-30 py-2 ml-10")}
-            >
-               Home  
-            </NavLink>
-          </button>
-          <button className="">
-            <NavLink
-              to="/Quests"
-              className={({isActive}) => (isActive ? "bg-white text-violet-600 rounded-2xl pl-15 pr-30 py-2" : "text-white pl-15 pr-29 py-2 ml-10")}
-            >
-              Quests  
-            </NavLink>
-          </button>
-          <button>
-            <NavLink
-              to="/Dungeon"
-              className={({isActive}) => (isActive ? "bg-white text-violet-600 rounded-2xl pl-15 pr-24 py-2"  : "text-white pl-15 pr-24 py-2 ml-10")}
-            >
-              Dungeon 
-            </NavLink>
-          </button>
-          <button>
-            <NavLink
-              to="/Dashboard"
-              className={({isActive}) => (isActive ? "bg-white text-violet-600 rounded-2xl pl-15 pr-22 py-2"  : "text-white pl-15 pr-22 py-2 ml-10")}
-            >
-              Dashboard
-            </NavLink>
-          </button>
-        </div>
-        </div>
+    <nav className="w-64 min-h-screen fixed left-0 top-0 bg-violet-800 shadow-2xl">
+      <div className="flex flex-col gap-6 mt-20 px-8">
+        <NavLink to="/" className={navLinkClass}>
+          Home
+        </NavLink>
+        <NavLink to="/Quests" className={navLinkClass}>
+          Quests
+        </NavLink>
+        <NavLink to="/Dungeon" className={navLinkClass}>
+          Dungeon
+        </NavLink>
+        <NavLink to="/Dashboard" className={navLinkClass}>
+          Dashboard
+        </NavLink>
+      </div>
+    </nav>
   );
 }
 
