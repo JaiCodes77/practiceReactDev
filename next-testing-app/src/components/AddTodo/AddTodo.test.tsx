@@ -11,4 +11,16 @@ describe('AddTodo Component',()=>{
         const button = screen.getByRole('button',{name:/add todo/i});
         expect(button).toBeInTheDocument();
     });
+
+    it('should', async() => {
+        const user = userEvent.setup();
+        const mockOnAdd = jest.fn();
+
+        render(<AddTodo todo='buy milk' onAdd={mockOnAdd}/>);
+
+        const button = screen.getByRole('button', {name:/add todo/i})
+        await user.click(button)
+
+        expect(mockOnAdd).toHaveBeenCalled();
+    });
 })
