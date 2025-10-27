@@ -1,7 +1,6 @@
 import {render,screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import AddTodo from './AddTodo'
-import { mock } from 'node:test';
 
 describe('AddTodo Component',()=>{
 
@@ -36,5 +35,17 @@ describe('AddTodo Component',()=>{
         await user.click(button)
 
         expect(mockOnAdd).toHaveBeenCalledWith("Buy Groceries");
+    }); 
+
+    it('should call the onAdd function only once per click', async() => {
+        const user = userEvent.setup();
+        const mockOnAdd = jest .fn();
+        
+        render(<AddTodo todo='test' onAdd={mockOnAdd}/>);
+
+        const button = screen.getByRole('button',{name:/add todo/i})
+        await user.click(button);
+
+        expect(mockOnAdd).toHaveBeenCalledTimes(1);
     })
 })
