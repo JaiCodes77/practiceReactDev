@@ -6,6 +6,9 @@ describe('AddTodo Component',()=>{
 
     it('should render the addTodo button', () => {
         const mockOnAdd = jest.fn();
-        render(<AddTodo todo='add todo' onAdd={mockOnAdd}/>)
-    })
+        render(<AddTodo todo='add todo' onAdd={mockOnAdd}/>) 
+
+        const button = screen.getByRole('button',{name:/add todo/i});
+        expect(button).toBeInTheDocument();
+    });
 })
