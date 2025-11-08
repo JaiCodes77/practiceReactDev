@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 function Home() {
   const [count, setCount] = useState(1500);
   const [isRunning, setIsRunning] = useState(false);
+  const [isOpen,setIsOpen] = useState(false);
 
   useEffect(() => {
     if (!isRunning) return;
@@ -41,13 +42,21 @@ function Home() {
     setCount(1500);
   };
 
+  const modalOpen = () =>{
+    setIsOpen(!isOpen);
+  }
+
   return ( 
 
     <div className="h-screen w-screen bg-purple-400 fixed top-0 left-64 flex justify-center items-center font-sans">
       <div className="mb-80">
         <div className="h-100 w-160 bg-purple-300 mr-84 rounded-lg shadow-xl/30 flex flex-col p-4">
           <div className="flex space-x-40 mb-8">
-            <button className="w-24 bg-blue-400 h-10 text-white rounded-xl cursor-pointer shadow-lg hover:bg-indigo-400">
+            <button className={`w-24 h-10 text-white rounded-xl cursor-pointer shadow-lg ${
+                isOpen 
+                  ? "bg-indigo-500 hover:bg-indigo-600" 
+                  : "bg-blue-400 hover:bg-indigo-400"
+              }`} onClick={modalOpen}>
               focus time
             </button>
             <button className="w-24 bg-blue-400 h-10 text-white rounded-xl cursor-pointer shadow-lg hover:bg-indigo-400">
@@ -58,10 +67,12 @@ function Home() {
             </button>
           </div>
 
+          { isOpen && 
+          <>
           <div className="flex justify-center mt-20">
             <div className="text-6xl font-bold text-gray-600">{formatTime(count)}</div>
           </div>
-
+         
           <div className="flex justify-center gap-4 mt-20">
             <button
               onClick={handleStart}
@@ -81,7 +92,8 @@ function Home() {
             >
               RESET
             </button>
-          </div>
+          </div> 
+          </>}
         </div>
       </div>
     </div>
