@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Home() { 
+function Home() {
   const [count, setCount] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -8,10 +8,12 @@ function Home() {
     if (!isRunning) return;
 
     const interval = setInterval(() => {
-      setCount(prev => prev + 1); // Use prev state to avoid stale closure
+      setCount((prev) => prev + 1);
     }, 1000);
 
-    return () => clearInterval(interval); // Cleanup
+    return () => {
+      clearInterval(interval);
+    };
   }, [isRunning]);
 
   const handleStart = () => {
@@ -31,7 +33,7 @@ function Home() {
     <div className="h-screen w-screen bg-purple-400 fixed top-0 left-64 flex justify-center items-center font-sans">
       <div className="mb-80">
         <div className="h-100 w-160 bg-purple-300 mr-84 rounded-lg shadow-xl/30 flex flex-col p-4">
-          <div className="flex space-x-4 mb-8">
+          <div className="flex space-x-40 mb-8">
             <button className="w-24 bg-blue-400 h-10 text-white rounded-xl cursor-pointer shadow-lg hover:bg-indigo-400">
               focus time
             </button>
@@ -42,25 +44,25 @@ function Home() {
               long break
             </button>
           </div>
-          
-          <div className="flex justify-center mb-4">
+
+          <div className="flex justify-center mt-20">
             <div className="text-6xl font-bold text-white">{count}</div>
           </div>
 
-          <div className="flex justify-center gap-4">
-            <button 
+          <div className="flex justify-center gap-4 mt-20">
+            <button
               onClick={handleStart}
-              className="bg-green-500 px-8 py-3 rounded-xl text-white font-semibold hover:bg-green-600 shadow-lg cursor-pointer"
+              className="bg-purple-500 px-8 py-3 rounded-xl text-white font-semibold hover:bg-purple-600 shadow-lg cursor-pointer"
             >
               START
             </button>
-            <button 
+            <button
               onClick={handleStop}
               className="bg-red-500 px-8 py-3 rounded-xl text-white font-semibold hover:bg-red-600 shadow-lg cursor-pointer"
             >
               STOP
             </button>
-            <button 
+            <button
               onClick={handleReset}
               className="bg-gray-500 px-8 py-3 rounded-xl text-white font-semibold hover:bg-gray-600 shadow-lg cursor-pointer"
             >
