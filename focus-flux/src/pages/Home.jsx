@@ -20,7 +20,13 @@ function Home() {
     return () => {
       clearInterval(interval);
     };
-  }, [isRunning]);
+  }, [isRunning]); 
+
+    const formatTime = (seconds) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
 
   const handleStart = () => {
     setIsRunning(true);
@@ -53,7 +59,7 @@ function Home() {
           </div>
 
           <div className="flex justify-center mt-20">
-            <div className="text-6xl font-bold text-white">{count}</div>
+            <div className="text-6xl font-bold text-gray-600">{formatTime(count)}</div>
           </div>
 
           <div className="flex justify-center gap-4 mt-20">
