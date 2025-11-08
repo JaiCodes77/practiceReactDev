@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 
 function Home() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1500);
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
     if (!isRunning) return;
 
-    const interval = setInterval(() => {
-      setCount((prev) => prev + 1);
+   const interval = setInterval(() => {
+      setCount((prev) => {
+        if (prev <= 0) {
+          setIsRunning(false); 
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => {
@@ -26,10 +32,11 @@ function Home() {
 
   const handleReset = () => {
     setIsRunning(false);
-    setCount(0);
+    setCount(1500);
   };
 
-  return (
+  return ( 
+
     <div className="h-screen w-screen bg-purple-400 fixed top-0 left-64 flex justify-center items-center font-sans">
       <div className="mb-80">
         <div className="h-100 w-160 bg-purple-300 mr-84 rounded-lg shadow-xl/30 flex flex-col p-4">
